@@ -13,6 +13,12 @@ body.addEventListener('click', function (event) {
 
 var images = [
   {
+    name:'Trust',
+    src:'https://api.free.vote/images/20240327-91CD.PNG',
+    animation: 'focusright 10s linear 0s 1 forwards',
+    beginNext: 9000 
+  },
+  {
     name:'Fox',
     src: 'https://preview.redd.it/htvmdql30qva1.jpg?width=640&crop=smart&auto=webp&s=6493f0d4cb37ddfe5f2cb87a187c8d551db1c7f8',
     animation: 'slide 10s linear 0s 1 forwards',
@@ -98,10 +104,7 @@ function nextSlide() {
     
     newImage.style.animation = imageData.animation;      
   }, 50);
-  
-//   console.log('Begin', currentImageIndex, imageData.name, newBackground.classList, currentBackground.classList);
-  
-
+    
   // Stopped on body click
   if (go) {
     setTimeout(nextSlide, imageData.beginNext);
